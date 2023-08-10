@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+	int a=0,b=1,n,i,next,sum=0;
+	printf("enter the size");
+	scanf("%d",&n);
+	 int fib[n];
+	  fib[0]=0;
+	  fib[1]=1;
+	 
+	 for(i=2;i<n;i++){
+	 	fib[i]=fib[i-1]+fib[i-2];
+	 	if(i%2==0){
+	 		sum=sum+fib[i];
+		 }
+	 }
+	 printf("fibnoseries\n");
+	 for(i=0;i<n;i++){
+	 	printf("%d, ",fib[i]);
+	 }
+	 printf("sum of even indices \n");
+	 printf("%d, ",sum);
+}
